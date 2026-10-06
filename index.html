@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Akhar Adventure</title>
+<meta name="description" content="A playful way for kids aged 5 to 10 to learn the 35 Gurmukhi letters: see, hear, trace and play.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500;700;800&family=Nunito:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="stitch" aria-hidden="true"></div>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="mor" aria-hidden="true">🦚</span><h1>Akhar Adventure<small>ਪੈਂਤੀ ਅੱਖਰ ਸਿੱਖੋ</small></h1></div>
+    <div class="stars" title="Stars earned"><span aria-hidden="true">⭐</span><span id="starCount">0</span></div>
+  </header>
+
+  <main id="home">
+    <div class="wrap" style="gap:16px">
+      <p class="intro">Tap a letter to <b>see it, hear it and trace it</b>. When a row feels easy, press <b>Play</b> for a quick game. These are the 35 letters of the <b>ਪੈਂਤੀ</b>, in the order Punjabi kids learn them.</p>
+      <div class="chart" id="chart"></div>
+      <div class="legend"><span><i></i>one dot each for: looked, traced, won a game</span></div>
+    </div>
+  </main>
+
+  <section id="letter" class="panel" hidden></section>
+  <section id="game" class="panel game" hidden></section>
+  <p class="foot">Prototype. Sounds use your device's Punjabi voice when it has one; recorded audio comes next.</p>
+</div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+<div class="toast" id="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
