@@ -6,10 +6,11 @@ For each letter, kids can:
 
 - **See it** with a picture word (ਅ for ਅੰਬ, mango)
 - **Hear it** (uses the device's Punjabi voice when it has one)
-- **Trace it** with a finger or mouse to earn a star
-- **Play** a quick game for each row of five letters
+- **Write it** on a wooden ਫੱਟੀ (takhti) with a finger or mouse to earn a star
+- **Play** Balloon Pop, Memory Match or a Quick Quiz for each row of five letters
 
-Progress is saved in the browser.
+The 35 letters sit along a road through a Punjab village, one stop per ਪੈਂਤੀ row, with Mor the peacock as a guide.
+Winning a game at a stop adds its sticker to the sticker book. Progress is saved in the browser.
 
 ## Run locally
 
