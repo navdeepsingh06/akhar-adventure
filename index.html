@@ -8,31 +8,53 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦚</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500;700;800&family=Nunito:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500;700;800&family=Nunito:wght@600;700;800;900&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="stitch" aria-hidden="true"></div>
-<div class="wrap">
-  <header>
-    <div class="brand"><span class="mor" aria-hidden="true">🦚</span><h1>Akhar Adventure<small>ਪੈਂਤੀ ਅੱਖਰ ਸਿੱਖੋ</small></h1></div>
-    <div class="stars" title="Stars earned"><span aria-hidden="true">⭐</span><span id="starCount">0</span></div>
-  </header>
+<!-- page -->
+<header class="bar">
+  <button class="brand" id="brand" aria-label="Akhar Adventure home">
+    <span class="brand-mor" id="brandMor" aria-hidden="true"></span>
+    <span class="brand-name">Akhar Adventure<small>ਪੈਂਤੀ ਅੱਖਰ ਸਿੱਖੋ</small></span>
+  </button>
+  <div class="bar-tools">
+    <button class="chip" id="soundBtn" aria-pressed="true" aria-label="Sound effects on">🔊</button>
+    <button class="chip" id="stickerBtn" aria-label="Open sticker book">📒 <span id="stickerCount">0</span>/7</button>
+    <div class="chip stars" id="starChip" title="Stars earned"><span aria-hidden="true">⭐</span><span id="starCount">0</span></div>
+  </div>
+</header>
 
-  <main id="home">
-    <div class="wrap" style="gap:16px">
-      <p class="intro">Tap a letter to <b>see it, hear it and trace it</b>. When a row feels easy, press <b>Play</b> for a quick game. These are the 35 letters of the <b>ਪੈਂਤੀ</b>, in the order Punjabi kids learn them.</p>
-      <div class="chart" id="chart"></div>
-      <div class="legend"><span><i></i>one dot each for: looked, traced, won a game</span></div>
+<main class="wrap">
+  <section id="home">
+    <div class="sky" id="sky">
+      <div class="sun" aria-hidden="true"></div>
+      <div class="cloud c1" aria-hidden="true"></div>
+      <div class="cloud c2" aria-hidden="true"></div>
+      <svg class="kite" viewBox="0 0 60 120" aria-hidden="true"><path d="M30 2 52 30 30 62 8 30Z" fill="#E0287A"/><path d="M30 2 30 62M8 30h44" stroke="#FFC928" stroke-width="3"/><path d="M30 62c-8 14 8 22 0 34s8 18 0 24" fill="none" stroke="#2A1B3D" stroke-width="2"/><path d="M24 78l6 4 6-4M24 98l6 4 6-4" fill="#FF7A1A"/></svg>
+      <div class="hills" aria-hidden="true"></div>
+      <div class="hero-row">
+        <div class="mor-stage" id="heroMor"></div>
+        <div class="bubble" id="bubble" aria-live="polite"></div>
+      </div>
+      <div class="hero-cta">
+        <button class="go" id="continueBtn"></button>
+        <div class="trail-meter"><span>Letters met</span><div class="tm"><i id="metBar"></i></div><b id="metCount">0/35</b></div>
+      </div>
     </div>
-  </main>
+    <h2 class="journey-title">The road through the pind <small>7 stops, 5 letters each, in ਪੈਂਤੀ order</small></h2>
+    <ol class="journey" id="journey"></ol>
+    <p class="foot">Prototype. Sounds use your device's Punjabi voice when it has one; recorded audio comes next.</p>
+  </section>
 
-  <section id="letter" class="panel" hidden></section>
-  <section id="game" class="panel game" hidden></section>
-  <p class="foot">Prototype. Sounds use your device's Punjabi voice when it has one; recorded audio comes next.</p>
-</div>
+  <section id="letter" class="view" hidden></section>
+  <section id="game" class="view" hidden></section>
+</main>
+
+<div class="modal" id="modal" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true"></div></div>
 <canvas id="confetti" aria-hidden="true"></canvas>
 <div class="toast" id="toast" hidden></div>
 <script src="app.js"></script>
+<!-- /page -->
 </body>
 </html>
